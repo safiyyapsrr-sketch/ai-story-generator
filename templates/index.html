@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Story Generator</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>✨ AI Story Generator</h1>
+
+            <p>
+                Turn your ideas into unique stories using Generative AI
+            </p>
+
+        </header>
+
+
+        <div class="main-container">
+
+
+            <!-- STORY INPUT -->
+
+            <section class="card">
+
+                <h2>Create Your Story</h2>
+
+
+                <label for="topic">
+                    Story Topic
+                </label>
+
+                <input
+                    type="text"
+                    id="topic"
+                    placeholder="Example: A girl discovers a mysterious portal"
+                >
+
+
+                <label for="genre">
+                    Genre
+                </label>
+
+                <select id="genre">
+
+                    <option>Fantasy</option>
+
+                    <option>Science Fiction</option>
+
+                    <option>Horror</option>
+
+                    <option>Mystery</option>
+
+                    <option>Romance</option>
+
+                    <option>Adventure</option>
+
+                    <option>Thriller</option>
+
+                    <option>Comedy</option>
+
+                </select>
+
+
+                <label for="characters">
+                    Characters
+                </label>
+
+                <textarea
+                    id="characters"
+                    placeholder="Example: Sara, a curious college student"
+                ></textarea>
+
+
+                <label for="setting">
+                    Setting
+                </label>
+
+                <input
+                    type="text"
+                    id="setting"
+                    placeholder="Example: A mysterious college hostel"
+                >
+
+
+                <label for="mood">
+                    Mood
+                </label>
+
+                <select id="mood">
+
+                    <option>Exciting</option>
+
+                    <option>Mysterious</option>
+
+                    <option>Emotional</option>
+
+                    <option>Dark</option>
+
+                    <option>Funny</option>
+
+                    <option>Inspirational</option>
+
+                </select>
+
+
+                <label for="length">
+                    Story Length
+                </label>
+
+                <select id="length">
+
+                    <option>Short</option>
+
+                    <option selected>Medium</option>
+
+                    <option>Long</option>
+
+                </select>
+
+
+                <button id="generateBtn">
+
+                    ✨ Generate Story
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- STORY OUTPUT -->
+
+            <section class="card story-card">
+
+                <div class="story-header">
+
+                    <h2>Your Story</h2>
+
+                    <button id="copyBtn">
+
+                        📋 Copy
+
+                    </button>
+
+                </div>
+
+
+                <div id="loading" class="hidden">
+
+                    <div class="spinner"></div>
+
+                    <p>AI is writing your story...</p>
+
+                </div>
+
+
+                <div id="storyOutput">
+
+                    <p class="placeholder">
+
+                        Your generated story will appear here...
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+
+</body>
+
+</html>
